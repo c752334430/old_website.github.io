@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Tianyi">
 
-    <title>Graph DPR</title>
+    <title>Learning Networks from Random Walk-Based Node Similarities</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../static/bootstrap.min.css" rel="stylesheet">
@@ -40,71 +40,64 @@
 </nav>
 <main role="main" class="container">
 
-
-    <!-- Page Header -->
     <header class="masthead" style="background-image: url('../img/post-bg.jpg')">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="post-heading">
-                        <h1>Dot Product Represent for graph(summary)</h1>
-                        <h2 class="subheading">Mainly summarize the idea and history of graph representation, especially DPR.</h2>
+                        <h1>Learning networks from random walk-based node similarities (2018)</h1>
+                        <h2 class="subheading">super long paper accepted by NeuIPS.</h2>
                         <span class="meta">Posted by
               <a href="#">Tianyi Chen</a>
-              on Nov 22, 2018</span>
+              on Mar 12, 2019</span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Post Content -->
+
     <article>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
 
                     <p>
-                        Given a graph G = (V,E), we can store it as:<br />
-                        1. Adjacency list representation (store neighbors).<br />
-                        2. Adjacency matrix (most common).<br />
-                        3. Dot product representation (v_i * v_j = 1 if connected and 0 if disconnected for every i and j in graph).<br />
+                        Prerequisite:
+                    </p>
+                    <p>
+                        1 good Hub (vertices points to good authorities) and good Authority(vertices pointed by good hub
+                        s). To calculate this, we use iterate with initial hub and authority scores set to 1. This can
+                        also be used to measure the node similarity between different graphs. HITS is a very important algorithm.
+                    </p>
+                    <p>
+                        2 commute time. This idea comes from <a href="http://outobox.cs.umn.edu/Random_Walks_Collaborative_Recommendation_Fouss.pdf">here</a>.
+                         I probably should write another blog about this paper since it seems kind of important.
 
+                        (And yes I am.)
                     </p>
                     <p>
-                        Some definitions:
+                        Three questions.
                     </p>
                     <p>
-                        Given a graph G on vertices V = {v1,...,vn} and a field F, an asymptotic dot product representation of G, of dimension d over F, is a sequence
-                        of mappings {Xk} where each Xk : V → Fd such that for i ̸= j, lim(Xk(vi)·Xk(vj)) equals 1 if vi ∼ vj, and equals 0 otherwise.
+                        First, given all commute time across the network with no noise, reconstruct the
+                        graph. (can be done in polynomial time)
                     </p>
                     <p>
-                        For a field F and a graph G, dpF(G) [dpF∗ (G)] is the minimum
-                        dimension d such that Fd admits an exact [asymptotic] dot product representation of G.(clearly we want to achieve a small d)
+                        Second, given a subset of commute time across the network with no noise...
                     </p>
                     <p>
-                        The matrix X is an exact dot product representation of G iff XT X = A + D, where A is the adjacency matrix of G and D is some diagonal matrix.
+                        Third, given a subset of commute time across the network with noise n (ex. a normal distributed value)
                     </p>
+
                     <p>
-                        Let Pn be the path on n vertices. For any field F, dpF(Pn) = n−1.
-                    </p>
-                    <p>
-                        For any field F and graph G on n vertices, dpF(G) ≤ n − 1, where n is the number of nodes. And
-                        dpF(G) ≤ m, where m is the number of edges
-                    </p>
-                    <!--<img class="img-fluid" src="../resource/graphstruweb.png" alt="" >-->
-                    <p>
-                        Problem for today's web dataset.
+
                     </p>
                 </div>
             </div>
         </div>
     </article>
-
-
-
-
 </main>
 
 <footer class="container">
