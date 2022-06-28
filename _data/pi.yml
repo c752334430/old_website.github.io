@@ -1,0 +1,15 @@
+- name: Tianyi Chen
+  photo: myPhoto.jpeg
+  info: PhD, Boston University 
+  email: ctony@bu.edu
+  github: https://github.com/c752334430
+  researchgate: https://www.researchgate.net/profile/Tianyi-Chen-25
+  scholar: https://scholar.google.com/citations?user=AtAjuJoAAAAJ
+  cv: cv/TianyiChen.pdf
+  number_educ: 3
+  education1: (2019-) Ph.D. Computer Science<br> Boston University (advised by <a href="https://tsourakakis.com/" target="_blank">Prof. Tsourakakis</a>)
+  education2: (2019) M.S. Computer Science<br> Boston University
+  education3: (2017) B.S. Software Engineering <br>  Xi'an Jiaotong University
+  education1short: (2019-) Ph.D. CS, BU 
+  education2short: (2019) M.S. CS, BU
+  education3short: (2017) B.S., Xi'an, China
