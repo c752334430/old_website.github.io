@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Tianyi">
+
+    <title>Learning Networks from Random Walk-Based Node Similarities</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/starter-template.css" rel="stylesheet">
+    <link href="../css/clean-blog.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../TianyiChen.pdf">Resume</a>
+            </li>
+
+        </ul>
+        <!-- <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+    </div>
+</nav>
+<main role="main" class="container">
+
+    <header class="masthead" style="background-image: url('../img/post-bg.jpg')">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="post-heading">
+                        <h1>Learning networks from random walk-based node similarities (2018)</h1>
+                        <h2 class="subheading">super long paper accepted by NeuIPS.</h2>
+                        <span class="meta">Posted by
+              <a href="#">Tianyi Chen</a>
+              on Mar 12, 2019</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+
+                    <p>
+                        Prerequisite:
+                    </p>
+                    <p>
+                        1 good Hub (vertices points to good authorities) and good Authority(vertices pointed by good hub
+                        s). To calculate this, we use iterate with initial hub and authority scores set to 1. This can
+                        also be used to measure the node similarity between different graphs. HITS is a very important algorithm.
+                    </p>
+                    <p>
+                        2 commute time. This idea comes from <a href="http://outobox.cs.umn.edu/Random_Walks_Collaborative_Recommendation_Fouss.pdf">here</a>.
+                         I probably should write another blog about this paper since it seems kind of important.
+
+                        (And yes I am.)
+                    </p>
+                    <p>
+                        Three questions.
+                    </p>
+                    <p>
+                        First, given all commute time across the network with no noise, reconstruct the
+                        graph. (can be done in polynomial time)
+                    </p>
+                    <p>
+                        Second, given a subset of commute time across the network with no noise...
+                    </p>
+                    <p>
+                        Third, given a subset of commute time across the network with noise n (ex. a normal distributed value)
+                    </p>
+
+                    <p>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </article>
+</main>
+
+<footer class="container">
+    <p>Created Nov 22, 2018</p>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script>window.jQuery || document.write('<script src="../static/jquery-slim.min.js"><\/script>')</script>
+<script src="../static/popper.min.js"></script>
+<script src="../static/bootstrap.min.js"></script>
+</body>
+</html>
